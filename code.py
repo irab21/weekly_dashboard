@@ -16,7 +16,7 @@ st.sidebar.title('Options ')
 st.markdown("### Your team's performance for this week 📓" )
 st.write("This Dashboard is prepared to give you a better insight into your team's overall performance as well as give you an idea of where you stand in comparision to other  teams")
 
-DATA_URL= (weekly_scoreboard.xlsx)
+DATA_URL= 'weekly_scoreboard.xlsx'
 
 def load_data():
 	data=pd.read_excel(DATA_URL)
