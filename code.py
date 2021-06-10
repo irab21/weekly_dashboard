@@ -13,7 +13,7 @@ st.image(image,width=350)
 
 st.title('Weekly Score board')
 st.sidebar.title('Options ')
-st.markdown("### Your team's performance for this week 📓" )
+st.markdown("### Your team's performance for the last week 📓" )
 st.write("This Dashboard is prepared to give you a better insight into your team's overall performance as well as give you an idea of where you stand in comparision to other  teams")
 
 DATA_URL= 'weekly_scoreboard.xlsx'
@@ -71,7 +71,7 @@ select= st.sidebar.selectbox('Drop Box',('CV Submission Percentage','CV Conversi
 
 
 if select=='CV Submission Percentage':
-	st.write('### CV Submission Percentage is the Percentage of CV submission target achieved by the Team in the last 2 weeks')
+	st.write('### CV Submission Percentage is the Percentage of CV submission target achieved by the Team in the last week')
 
 	fig1=px.line(x=team1,y=cv_percent1,text=cv_percent,hover_name=team1)
 	fig1.update_traces(texttemplate='%{text:.2s}', textposition='top center')
