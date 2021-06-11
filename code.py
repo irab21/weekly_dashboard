@@ -32,9 +32,7 @@ team1=data['Team Name'].to_list()
 cv_target=data['CV target'].to_list()
 interview=data['Interviews'].to_list()
 cv_percent=data['CV Submission Percentage'].round(decimals=0).to_list()
-
 cv_conversion=data['CV Conversion'].round(decimals=0).to_list()
-
 cv_sr=data['CV Ratio Scale'].to_list()
 i_sr=data['Interview Ratio Scale'].to_list()
 final=data['Final Point Scale'].to_list()
@@ -94,7 +92,7 @@ st.sidebar.markdown('### Scaled Ratio Score')
 
 if st.sidebar.checkbox('CV Ratio Scale',True,key=4):
 	st.write('### CV Ratio Scale is the ratio of cv submitted to the cv submission target scaled ')
-	fig3=px.area(x=team1,y=cv_sr,text=cv_sr)
+	fig3=px.line(x=team1,y=cv_sr,text=cv_sr)
 	fig3.update_traces(texttemplate='%{text:.2s}',textposition='top center')
 	st.plotly_chart(fig3)
 
@@ -102,7 +100,7 @@ if st.sidebar.checkbox('CV Ratio Scale',True,key=4):
 if st.sidebar.checkbox('Interview Ratio Scale',True,key=5):
 	st.write('### Interview Ratio scale is a scaled ratio of Total Number of Interviews to the Total Number of CV Submitted')
 	st.write('\n\n')
-	fig4=px.area(x=team1,y=i_sr,text=i_sr)
+	fig4=px.line(x=team1,y=i_sr,text=i_sr)
 	fig4.update_traces(texttemplate='%{text:.2s}',textposition='top center')
 	st.plotly_chart(fig4)
 
@@ -111,7 +109,7 @@ st.sidebar.markdown('### Final Scores')
 
 if st.sidebar.checkbox('Final Score',True,key=6):
 	st.write('### This is the final score calculated out of 10,arranged in ascending order')
-	fig5=px.funnel(y=team1,x=final1,text=final,orientation='h',height=600)
+	fig5=px.funnel(y=team1,x=final1,text=final1,orientation='h',height=600)
 	fig5.update_traces(texttemplate='%{text:.2s}')
 	st.plotly_chart(fig5)
 
