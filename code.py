@@ -129,4 +129,4 @@ score=[3.76,4.16,4.23,4.27,5.12,6.12,6.18,7.22]
 
 
 #st.write(final)
-st.write('### The Team with Maximum Score is %s, with score %s '% (team.iloc[[7]],score.iloc[[7]]))
+st.write('### The Team with Maximum Score is %s, with score %s '% (team[7],score[7]))
