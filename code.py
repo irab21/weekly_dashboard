@@ -32,9 +32,9 @@ team1=data['Team Name'].to_list()
 cv_target=data['CV target'].to_list()
 interview=data['Interviews'].to_list()
 cv_percent=data['CV Submission Percentage'].round(decimals=0).to_list()
-cv_percent1=cv_percent.sort()
+
 cv_conversion=data['CV Conversion'].round(decimals=0).to_list()
-cv_conversion1=cv_conversion.sort()
+
 cv_sr=data['CV Ratio Scale'].round(decimals=0).to_list()
 i_sr=data['Interview Ratio Scale'].round(decimals=0).to_list()
 final=data['Final Point Scale'].round(decimals=0).to_list()
