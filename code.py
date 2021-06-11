@@ -114,7 +114,7 @@ if st.sidebar.checkbox('Final Score',True,key=6):
 	st.plotly_chart(fig5)
 
 st.write(team1)
-st.write(fina1)
+st.write(final1)
 
 df=data['Final Point Scale']
 df1=data['Team Name']
