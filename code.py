@@ -129,4 +129,4 @@ df=pd.DataFrame({'team':df1, 'score':df.values})
 
 final=df.describe()
 #st.write(final)
-st.write('### The Team with Maximum Score is %s, '% (df1.iloc[[6]]))
+st.write('### The Team with Maximum Score is %s, '% (df1.iloc[[5]]))
