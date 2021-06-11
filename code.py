@@ -37,7 +37,8 @@ cv_sr=data['CV Ratio Scale'].to_list()
 i_sr=data['Interview Ratio Scale'].to_list()
 final=data['Final Point Scale'].to_list()
 
-final_score=data[('Final Point Scale','Team Name')]
+final_score=data[Final Point Scale']
+final_score=pd.DataFrame({'Team':team1,'score':final_score.values})
 st.write(final_core)
 
 
