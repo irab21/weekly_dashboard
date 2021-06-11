@@ -115,7 +115,7 @@ st.write(final_score)
 
 if st.sidebar.checkbox('Final Score',True,key=6):
 	st.write('### This is the final score calculated out of 10,arranged in ascending order')
-	fig5=px.area(final_score,x='Team',y='score',text='score',height=600)
+	fig5=px.funnel_area(final_score,x='Team',y='score',text='score',height=600)
 	fig5.update_traces(texttemplate='%{text:.2s}')
 	st.plotly_chart(fig5)
 
