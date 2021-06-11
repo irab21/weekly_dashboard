@@ -34,7 +34,7 @@ interview=data['Interviews'].to_list()
 cv_percent=data['CV Submission Percentage'].round(decimals=0).to_list()
 cv_conversion=data['CV Conversion'].round(decimals=0).to_list()
 cv_sr=data['CV Ratio Scale'].to_list()
-i_sr=data['Interview Ratio Scale'].to_list()
+i_sr=data['Interview Ratio Scale'].round(decimals=3).to_list()
 final=data['Final Point Scale'].to_list()
 
 
@@ -100,8 +100,8 @@ if st.sidebar.checkbox('CV Ratio Scale',True,key=4):
 if st.sidebar.checkbox('Interview Ratio Scale',True,key=5):
 	st.write('### Interview Ratio scale is a scaled ratio of Total Number of Interviews to the Total Number of CV Submitted')
 	st.write('\n\n')
-	fig4=px.line(x=team1,y=i_sr,text=i_sr)
-	fig4.update_traces(texttemplate='%{text:.2s}',textposition='top center')
+	fig4=px.line(x=team1,y=i_sr)
+	fig4.update_traces(textposition='top center')
 	st.plotly_chart(fig4)
 
 st.sidebar.markdown('### Final Scores')
