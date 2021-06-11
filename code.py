@@ -102,7 +102,7 @@ if st.sidebar.checkbox('Interview Ratio Scale',True,key=5):
 	st.write('\n\n')
 	
 	fig4=px.bar(x=team1,y=i_sr,text=i_sr)
-	fig4.update_traces(texttemplate='%{y:.2s}',textposition='top center')
+	fig4.update_traces(texttemplate='%{y:.2s}',textposition='outside')
 	st.plotly_chart(fig4)
 
 st.sidebar.markdown('### Final Scores')
