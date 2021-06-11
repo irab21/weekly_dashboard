@@ -36,7 +36,7 @@ cv_conversion=data['CV Conversion'].round(decimals=0).to_list()
 cv_sr=data['CV Ratio Scale'].to_list()
 i_sr=data['Interview Ratio Scale'].to_list()
 final=data['Final Point Scale'].to_list()
-final1=final.sort()
+
 
 st.write(cv_sr)
 st.write(i_sr)
@@ -109,12 +109,12 @@ st.sidebar.markdown('### Final Scores')
 
 if st.sidebar.checkbox('Final Score',True,key=6):
 	st.write('### This is the final score calculated out of 10,arranged in ascending order')
-	fig5=px.funnel(x=final1,y=team1,text=final,orientation='h',height=600)
+	fig5=px.funnel(x=final,y=team1,text=final,orientation='h',height=600)
 	fig5.update_traces(texttemplate='%{text:.2s}')
 	st.plotly_chart(fig5)
 
 st.write(team1)
-st.write(final1)
+#st.write(final1)
 
 df=data['Final Point Scale']
 df1=data['Team Name']
