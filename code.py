@@ -73,7 +73,7 @@ select= st.sidebar.selectbox('Drop Box',('CV Submission Percentage','CV Conversi
 if select=='CV Submission Percentage':
 	st.write('### CV Submission Percentage is the Percentage of CV submission target achieved by the Team in the last week\n')
 	st.write('\n\n')
-	fig1=px.line(x=team1,y=cv_percent1,text=cv_percent,hover_name=team1)
+	fig1=px.line(x=team1,y=cv_percent,text=cv_percent,hover_name=team1)
 	fig1.update_traces(texttemplate='%{text:.2s}', textposition='top center')
 	fig1.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 	st.plotly_chart(fig1)
