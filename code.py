@@ -83,7 +83,7 @@ if select=='CV Submission Percentage':
 else:
 	st.write('### CV Conversion Percentage is the Percentage taken from the ratio of total number of Interviews and total number of CVs Submitted ')
 	st.write('\n\n')
-	fig2=px.line(x=team1,y=cv_conversion,text=cv_conversion,range_y=[100])
+	fig2=px.line(x=team1,y=cv_conversion,text=cv_conversion,range_y=[10,20,30,40,50,60,70,80,100])
 	fig2.update_traces(texttemplate='%{text:.2s}', textposition='top center')
 	st.plotly_chart(fig2)
 
