@@ -108,8 +108,8 @@ st.sidebar.markdown('### Final Scores')
 
 
 
-final_score=data['Final Point Scale'].sort()
-final_score=pd.DataFrame({'Team':team1,'score':final_score})
+final_score=data['Final Point Scale']
+final_score=pd.DataFrame({'Team':team1,'score':final_score.sort()})
 st.write(final_score)
 
 if st.sidebar.checkbox('Final Score',True,key=6):
