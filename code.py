@@ -100,7 +100,7 @@ if st.sidebar.checkbox('CV Ratio Scale',True,key=4):
 if st.sidebar.checkbox('Interview Ratio Scale',True,key=5):
 	st.write('### Interview Ratio scale is a scaled ratio of Total Number of Interviews to the Total Number of CV Submitted')
 	st.write('\n\n')
-	fig4=px.line(x=team1,y=i_sr,text=y)
+	fig4=px.line(x=team1,y=i_sr,text=i_sr)
 	fig4.update_traces(texttemplate='%{y:.2s}',textposition='top center')
 	st.plotly_chart(fig4)
 
