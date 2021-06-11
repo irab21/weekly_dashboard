@@ -37,7 +37,7 @@ cv_sr=data['CV Ratio Scale'].to_list()
 i_sr=data['Interview Ratio Scale'].to_list()
 final=data['Final Point Scale'].to_list()
 
-final_Score=data['Final Point Scale','Team Name']
+final_Score=data[('Final Point Scale','Team Name')]
 st.write(final_score)
 
 
