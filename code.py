@@ -94,7 +94,7 @@ st.sidebar.markdown('### Scaled Ratio Score')
 if st.sidebar.checkbox('CV Ratio Scale',True,key=4):
 	st.write('### CV Ratio Scale is the ratio of cv submitted to the cv submission target scaled ')
 	fig3=px.area(x=team1,y=cv_sr,text=cv_sr)
-	fig3.update_traces(texttemplate='%{text:.2s}',textposition='right center')
+	fig3.update_traces(texttemplate='%{text:.2s}',textposition='middle center')
 	st.plotly_chart(fig3)
 
 
