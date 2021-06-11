@@ -122,11 +122,10 @@ if st.sidebar.checkbox('Final Score',True,key=6):
 
 #st.write(final1)
 
-df=data['Final Point Scale']
-df1=data['Team Name']
-df=pd.DataFrame({'team':df1, 'score':df.values})
+
+df=pd.DataFrame({'team':["Amit's Team","Talib's Team","Digital Team","Akanksha's Team","Manpreet's Team","Ravleen's Team","Functional Team","Deepa's Team"], 'score':[3.76,4.16,4.23,4.27,5.12,6.12,6.18,7.22]})
 #st.write(df)
 
 final=df.describe()
 #st.write(final)
-st.write('### The Team with Maximum Score is %s, '% (df1.iloc[[5]]))
+st.write('### The Team with Maximum Score is %s, '% (df1.iloc[[7]]))
