@@ -39,7 +39,7 @@ final=data['Final Point Scale'].to_list()
 
 final_score=data['Final Point Scale']
 final_score=pd.DataFrame({'Team':team1,'score':final_score.values})
-st.write(final_core)
+st.write(final_score)
 
 
 
