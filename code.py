@@ -109,15 +109,15 @@ st.sidebar.markdown('### Final Scores')
 
 
 final_score=data['Final Point Scale']
-final_score=final_score
-final_score=pd.DataFrame({'Team':team1,'score':final_score.values})
+final_score=final_score.sort()
+#final_score=pd.DataFrame({'Team':team1,'score':final_score.values})
 st.write(final_score)
 
-if st.sidebar.checkbox('Final Score',True,key=6):
-	st.write('### This is the final score calculated out of 10,arranged in ascending order')
-	fig5=px.funnel(final_score,x='Team',y=[4.2727,4.1699,3.7657,6.1226,5.1212,7.2203,4.2348,6.1892],height=600)
-	fig5.update_traces(texttemplate='%{text:.2s}')
-	st.plotly_chart(fig5)
+#if st.sidebar.checkbox('Final Score',True,key=6):
+#	st.write('### This is the final score calculated out of 10,arranged in ascending order')
+#	fig5=px.funnel(final_score,x='Team',y=,height=600)
+#	fig5.update_traces(texttemplate='%{text:.2s}')
+#	st.plotly_chart(fig5)
 
 
 #st.write(final1)
