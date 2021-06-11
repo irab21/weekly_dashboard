@@ -37,9 +37,10 @@ cv_sr=data['CV Ratio Scale'].to_list()
 i_sr=data['Interview Ratio Scale'].to_list()
 final=data['Final Point Scale'].to_list()
 
+final_Score=data['Final Point Scale','Team Name']
+st.write(final_score)
 
-st.write(cv_sr)
-st.write(i_sr)
+
 
 st.sidebar.subheader('Data Division')
 #select= st.sidebar.selectbox('Please select the category',['Absolute Numbers','Ratios'],key=1)
