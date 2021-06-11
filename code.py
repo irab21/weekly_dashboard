@@ -35,8 +35,8 @@ cv_percent=data['CV Submission Percentage'].round(decimals=0).to_list()
 
 cv_conversion=data['CV Conversion'].round(decimals=0).to_list()
 
-cv_sr=data['CV Ratio Scale'].round(decimal=3).to_list()
-i_sr=data['Interview Ratio Scale'].round(decimal=3).to_list()
+cv_sr=data['CV Ratio Scale'].round(decimals=3).to_list()
+i_sr=data['Interview Ratio Scale'].round(decimals=3).to_list()
 final=data['Final Point Scale'].to_list()
 final1=final.sort()
 
