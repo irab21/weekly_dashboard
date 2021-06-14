@@ -108,21 +108,13 @@ st.sidebar.markdown('### Final Scores')
 
 
 final_score=pd.DataFrame({'Team':team1,'score':final})
-st.write(final_score)
+#st.write(final_score)
 
 if st.sidebar.checkbox('Final Score',True,key=6):
 	st.write('### This is the final score calculated out of 10,arranged in ascending order')
 	fig5=px.funnel(final_score,x='score',y='Team',orientation='h')
 	fig5.update_traces(texttemplate='%{x:.2s}')
 	st.plotly_chart(fig5)
-
-
-#st.write(final1)
-
-
-team=["Amit's Team","Talib's Team","Digital Team","Akanksha's Team","Manpreet's Team","Ravleen's Team","Functional Team","Deepa's Team"] 
-score=[3.76,4.16,4.23,4.27,5.12,6.12,6.18,7.22]
-#st.write(df)
 
 
 #st.write(final)
