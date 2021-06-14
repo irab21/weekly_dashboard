@@ -107,7 +107,7 @@ if st.sidebar.checkbox('Interview Ratio Scale',True,key=5):
 st.sidebar.markdown('### Final Scores')
 
 
-final_score=pd.DataFrame({'Team':team1,'score':final.values})
+final_score=pd.DataFrame({'Team':team1,'score':final})
 st.write(final_score)
 
 if st.sidebar.checkbox('Final Score',True,key=6):
