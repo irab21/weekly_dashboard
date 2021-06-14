@@ -34,7 +34,7 @@ cv_percent=data['CV Submission Percentage'].round(decimals=0).to_list()
 cv_conversion=data['CV Conversion'].round(decimals=0).to_list()
 cv_sr=data['CV Ratio Scale'].to_list()
 i_sr=data['Interview Ratio Scale'].round(decimals=3).to_list()
-final=data['Final Point Scale'].to_list()
+final=data['Final Point Scale'].round(decimals=3).to_list()
 
 
 
@@ -107,11 +107,8 @@ if st.sidebar.checkbox('Interview Ratio Scale',True,key=5):
 st.sidebar.markdown('### Final Scores')
 
 
-
-final_score=data['Final Point Scale']
-final_score=final_score
-final_score=pd.DataFrame({'Team':team1,'score':final_score.values})
-#st.write(final_score)
+final_score=pd.DataFrame({'Team':team1,'score':final.values})
+st.write(final_score)
 
 if st.sidebar.checkbox('Final Score',True,key=6):
 	st.write('### This is the final score calculated out of 10,arranged in ascending order')
