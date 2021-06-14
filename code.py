@@ -3,7 +3,6 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
-from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 from PIL import Image 
 
@@ -130,4 +129,4 @@ score=[3.76,4.16,4.23,4.27,5.12,6.12,6.18,7.22]
 
 
 #st.write(final)
-st.write('### The Team with Maximum Score is %s, with score %s '% (team[7],score[7]))
+st.write('### The Team with Maximum Score is %s, with score %s '% (team1[7],final[7]))
