@@ -28,6 +28,7 @@ if (password == ("Manpreet") or password==("Abhishek") or password ==("Deepa") o
 	data = load_data()
 
 	#st.write(data)
+	
 
 	teams= data['Team Name']
 	team1=data['Team Name'].to_list()
@@ -130,7 +131,7 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	data = load_data()
 	st.write(data)
 	st.sidebar.subheader('Data Division')
-	
+	data['Companies Contacted']=data['Companies Contacted'].astype(int)
 	companies_contacted=data['Companies Contacted'].round(decimals=0).to_list()
 	meetings=data['E-Meetings Scheduled'].round(decimals=0).to_list()
 	ongoing_projects=data['Ongoing Projects'].round(decimals=0).to_list()
