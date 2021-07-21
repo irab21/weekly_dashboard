@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from PIL import Image 
 
 password= st.text_input('Please Enter The Password')
-if (password == "Manpreet" or password=="Abhishek" or password =="Deepa" or password=="Akanksha" or password=="Amitender" or password=="Ravleen" or password=="Talib" or password=="Chandra" or password=="Dilip" or password="Soorabh"):
+if (password == ("Manpreet") or password==("Abhishek") or password ==("Deepa") or password==("Akanksha") or password==("Amitender") or password=="Ravleen" or password=="Talib" or password=="Chandra" or password=="Dilip" or password="Soorabh"):
 	
 	image_url='posterityfinal.png'
 	image= Image.open(image_url) 
