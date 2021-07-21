@@ -139,7 +139,7 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	if st.sidebar.checkbox('Show Number of Companies Contacted and Meetings Scheduled', True, key=1):
 		fig=go.Figure()
 		fig.add_trace(go.Bar(x=names,y=companies_contacted,name='Number Of Companies Contacted',marker_color='indianred',text=companies_contacted))
-		fig.add_trace(go.Bar(x=names,y=meetings,name='Meetings Scheduled', marker_color='ivory',text=meetings))
+		fig.add_trace(go.Bar(x=names,y=meetings,name='Meetings Scheduled', marker_color='lavender',text=meetings))
 		fig.update_traces(texttemplate='%{text:.5s}', textposition='outside',width=0.4)
 		fig.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 		fig.update_layout(barmode='group',height=600)
