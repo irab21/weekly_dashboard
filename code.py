@@ -130,9 +130,9 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	data = load_data()
 	st.write(data)
 	st.sidebar.subheader('Data Division')
-	companies_contacted=data['Companies Contacted']
-	meetings=data['E-Meetings Scheduled']
-	ongoing_projects=data['Ongoing Projects']
+	companies_contacted=data['Companies Contacted'].round(decimals=0)
+	meetings=data['E-Meetings Scheduled'].round(decimals=0)
+	ongoing_projects=data['Ongoing Projects'].round(decimals=0)
 	names=data['Name']
 	
 	st.write('Hover Over the Graphs to see the numbers')
