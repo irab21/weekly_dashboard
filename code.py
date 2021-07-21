@@ -116,10 +116,10 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	image= Image.open(image_url) 
 	st.image(image,width=350)
 	
-	st.title("### BD Team PRS Dashboard")
+	st.title("BD Team PRS Dashboard")
 	st.sidebar.title('Options ')
 	st.markdown("### BD team's performance for the last month 📓" )
-	st.write("This Dashboard is prepared to give you a better insight into your BD Team's overall performance as well as give you an idea of where you stand in comparision to other team members")
+	st.write("This Dashboard has been prepared to give you a better insight into your BD Team's overall performance as well as give you an idea of where you stand in comparision to other team members")
 	DATA_URL= 'BD Visuals.xlsx'
 
 	def load_data():
@@ -130,6 +130,23 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	data = load_data()
 	st.write(data)
 	st.sidebar.subheader('Data Division')
+	companies_contacted=data['Companies Contacted']
+	meetings=data['E-Meetings Scheduled']
+	ongoing_projects=data['Ongoing Projects']
+	names=data['Name']
+	
+	st.write('Hover Over the Graphs to see the numbers')
+	if st.sidebar.checkbox('Show Number of Companies Contacted and Meetings Scheduled', True, key=1):
+		fig=go.Figure()
+		fig.add_trace(go.Bar(x=names,y=companies_contacted,name='Number Of Companies Contacted',marker_color='indianred',text=companies_contacted))
+		fig.add_trace(go.Bar(x=names,y=meetings,name='Meetings Scheduled', marker_color='darkpink',text=meetings))
+		fig.update_traces(texttemplate='%{text:.5s}', textposition='outside',width=0.4)
+		fig.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
+		fig.update_layout(barmode='group',height=600)
+		st.plotly_chart(fig)
+		
+		
+	
 	
 	
 	
