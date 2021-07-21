@@ -133,7 +133,7 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	companies_contacted=data['Companies Contacted'].round(decimals=0).to_list()
 	meetings=data['E-Meetings Scheduled'].round(decimals=0).to_list()
 	ongoing_projects=data['Ongoing Projects'].round(decimals=0).to_list()
-	names=data['Name']
+	names=data['Name'].to_list()
 	
 	st.write('Hover Over the Graphs to see the numbers')
 	if st.sidebar.checkbox('Show Number of Companies Contacted and Meetings Scheduled', True, key=1):
