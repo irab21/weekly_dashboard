@@ -130,7 +130,7 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	data = load_data()
 	st.write(data)
 	st.sidebar.subheader('Data Division')
-	companies_contacted=data['Companies Contacted'].round(decimals=0).to_list()
+	companies_contacted=data['Companies Contacted'].round(decimals=1).to_list()
 	meetings=data['E-Meetings Scheduled'].round(decimals=0).to_list()
 	ongoing_projects=data['Ongoing Projects'].round(decimals=0).to_list()
 	names=data['Name'].to_list()
