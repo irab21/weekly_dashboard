@@ -111,7 +111,7 @@ if (password == ("Manpreet") or password==("Abhishek") or password ==("Deepa") o
 	#st.write(final)
 	st.write('### The Team with Maximum Score is %s, with score %s '% (team1[7],final[7]))
 	
-if (password==("Rishabh BD") or passwrord==("Sanjeev BD") or password==("Charles BD") or password==("Chandra BD") or password==("Soorabh BD") or password==("Dilip BD")):
+if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles BD") or password==("Chandra BD") or password==("Soorabh BD") or password==("Dilip BD")):
 	image_url='posterityfinal.png'
 	image= Image.open(image_url) 
 	st.image(image,width=350)
