@@ -110,3 +110,26 @@ if (password == ("Manpreet") or password==("Abhishek") or password ==("Deepa") o
 
 	#st.write(final)
 	st.write('### The Team with Maximum Score is %s, with score %s '% (team1[7],final[7]))
+	
+if (password==("Rishabh BD") OR passwrord==("Sanjeev BD") OR password==("Charles BD") OR password==("Chandra BD") OR password==("Soorabh BD") or password==("Dilip BD")):
+	image_url='posterityfinal.png'
+	image= Image.open(image_url) 
+	st.image(image,width=350)
+	
+	st.title("### BD Team PRS Dashboard")
+	st.sidebar.title('Options ')
+	st.markdown("### BD team's performance for the last month 📓" )
+	st.write("This Dashboard is prepared to give you a better insight into your BD Team's overall performance as well as give you an idea of where you stand in comparision to other team members")
+	DATA_URL= 'BD Visuals.xlsx'
+
+	def load_data():
+		data=pd.read_excel(DATA_URL)
+
+		return data 
+
+	data = load_data()
+	st.write(data)
+	st.sidebar.subheader('Data Division')
+	
+	
+	
