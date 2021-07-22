@@ -181,8 +181,8 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	fig10.add_trace(go.Pie(labels=labels, values=done, name="Charles"),1, 3)
 
 	fig10.update_traces(hole=.4, hoverinfo="label+percent+name")
-	fig10.update_layout(title_text="Projects Mapping",annotations=[dict(text='Ongoing Projects', x=0.09, y=0.5, font_size=12, showarrow=False),
-                dict(text='Finished Projects', x=0.50, y=0.5, font_size=12, showarrow=False),dict(text='Failed Projects', x=0.90, y=0.5, font_size=12, showarrow=False)])
+	fig10.update_layout(title_text="Projects Mapping",annotations=[dict(text='Rishabh', x=0.09, y=0.5, font_size=12, showarrow=False),
+                dict(text='Sanjeev', x=0.50, y=0.5, font_size=12, showarrow=False),dict(text='Charles', x=0.90, y=0.5, font_size=12, showarrow=False)])
 	st.plotly_chart(fig10)
 	
 		
