@@ -194,17 +194,21 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	st.plotly_chart(fig2)
 	
 	st.write('### Overall PRS Perfomance')
-	st.write('This Graph shows the overall performance of the BD team Member based on **Strategic Performamnce**,**Operational Excellence**, and **Capability Development** followed by a **Final Score**')
+	st.write('This Graph shows the overall performance of the BD team Member based on **Strategic Achievement**,**Operational Excellence**, and **Capability Development** followed by a **Final Score**')
 	fig3 = go.Figure()
 	fig3.add_trace(go.Scatter(x=names, y=sa,
                     mode='lines+markers',
-                    name='Strategic Performance'))
+                    name='Strategic  Achievement'))
 	fig3.add_trace(go.Scatter(x=names, y=oe,
                     mode='lines+markers',
                     name='Operational Exclellence'))
 	fig3.add_trace(go.Scatter(x=names, y=cd,
                     mode='lines+markers',
                     name='Capability Development'))
+	fig3.add_trace(go.Scatter(x=names, y=final,
+                    mode='lines+markers',
+                    name='Final Score'))
+	
 	st.plotly_chart(fig3)
 	
 	
