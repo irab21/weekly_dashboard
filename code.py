@@ -143,14 +143,12 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	
 	st.write('Hover Over the Graphs to see the numbers')
 	st.write(companies_contacted)
-	#if st.sidebar.checkbox('Show Number of Companies Contacted and Meetings Scheduled', True, key=1):
-	#	fig=go.Figure()
-	#	fig.add_trace(go.Bar(x=names,y=companies_contacted,name='Number Of Companies Contacted',marker_color='indianred',text=companies_contacted))
-	#	fig.add_trace(go.Bar(x=names,y=meetings,name='Meetings Scheduled', marker_color='mediumvioletred',text=meetings))
-	#	fig.update_traces(texttemplate='%{text:.5s}', textposition='outside',width=0.4)
-	#	fig.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
-	#	fig.update_layout(barmode='group',height=600)
-	#	st.plotly_chart(fig)
+	if st.sidebar.checkbox('Show Number of Companies Contacted and Meetings Scheduled', True, key=1):
+		fig=px.line(x=names,y=companies_contacted,text=comanies_conatacted)
+		fig.update_traces(texttemplate='%{text:.2s}', textposition='top center')
+		fig.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
+		st.plotly_chart(fig)
+		
 
 		
 		
