@@ -153,13 +153,15 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 		
 		
 	st.write('### Meetings Scheduled')
+	st.write('The graph shows, Target Vs Achieved for the meetings scheduled by the BD team.')
 	fig1 = go.Figure(data=[
     	go.Bar(name='Target', x=names, y=targets),
     	go.Bar(name='Meetings Scheduled', x=names, y=meetings)
 	])
 	# Change the bar mode
-	fig1.update_layout(barmode='stack')
+	fig1.update_layout(barmode='group')
 	st.plotly_chart(fig1)
+	
 		
 		
 	
