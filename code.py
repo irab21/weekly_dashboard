@@ -176,9 +176,9 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 		
 	labels=['Ongoing Projects','Failed Projects','Finished Projects']
 	fig10 = make_subplots(rows=1, cols=3, specs=[[{'type':'domain'}, {'type':'domain'},{'type':'domain'}]])
-	fig10.add_trace(go.Pie(labels=labels, values=op, name="Rishabh"),1, 1)
-	fig10.add_trace(go.Pie(labels=labels, values=fp, name="Sanjeev"),1, 2)
-	fig10.add_trace(go.Pie(labels=labels, values=done, name="Charles"),1, 3)
+	fig10.add_trace(go.Pie(labels=labels, values=[op,fp,done], name="Rishabh"),1, 1)
+	fig10.add_trace(go.Pie(labels=labels, values=[op,fp,done], name="Sanjeev"),1, 2)
+	fig10.add_trace(go.Pie(labels=labels, values=[op,fp,done], name="Charles"),1, 3)
 
 	fig10.update_traces(hole=.4, hoverinfo="label+percent+name")
 	fig10.update_layout(title_text="Projects Mapping",annotations=[dict(text='Rishabh', x=0.09, y=0.5, font_size=12, showarrow=False),
