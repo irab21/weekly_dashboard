@@ -122,7 +122,9 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	st.markdown("### BD team's performance for the last month 📓" )
 	st.write("This Dashboard has been prepared to give you a better insight into your BD Team's overall performance as well as give you an idea of where you stand in comparision to other team members")
 	DATA_URL= 'BD Visuals.xlsx'
+	
 
+	@st.cache(persist =True)
 	def load_data():
 		data=pd.read_excel(DATA_URL)
 
