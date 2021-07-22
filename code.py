@@ -144,7 +144,7 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	st.write('Hover Over the Graphs to see the numbers')
 	st.write(companies_contacted)
 	if st.sidebar.checkbox('Show Number of Companies Contacted and Meetings Scheduled', True, key=1):
-		fig=px.line(x=names,y=companies_contacted,text=comanies_contacted)
+		fig=px.line(x=names,y=companies_contacted,text=companies_contacted)
 		fig.update_traces(texttemplate='%{text:.2s}', textposition='top center')
 		fig.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
 		st.plotly_chart(fig)
