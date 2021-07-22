@@ -133,6 +133,8 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	data = load_data()
 	st.write(data)
 	st.sidebar.subheader('Data Division')
+	data['Companies Contacted']=data['Companies Contacted'].astype(int)
+	data['E-Meetings Scheduled']=data['E-Meetings Scheduled'].astype(int)
 
 	companies_contacted=data['Companies Contacted']
 	meetings=data['E-Meetings Scheduled']
