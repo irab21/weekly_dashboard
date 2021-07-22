@@ -140,7 +140,7 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	companies_contacted=data['Companies Contacted']
 	meetings=data['E-Meetings Scheduled']
 	ongoing_projects=data['Ongoing Projects']
-	targets=data['Meeting Targets]
+	targets=data['Meeting Targets']
 	names=data['Name'].to_list()
 	
 	st.write('Hover Over the Graphs to see the numbers')
