@@ -140,6 +140,10 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	data['Ongoing Projects']=data['Ongoing Projects'].astype(int)
 	data['Failed Projects']=data['Failed Projects'].astype(int)
 	data['Finished Projects']=data['Finished Projects'].astype(int)
+	data['SA(35)']=data['SA(35)'].astype(int)
+	data['Operational Excelence(50)']=data['Operational Excelence(50)'].astype(int)
+	data['Capability Develeopment(15)']=data['Capability Develeopment(15)'].astype(int)
+	data['Final Score(100)']=data['Final Score(100)'].astype(int)
 	
 
 	companies_contacted=data['Companies Contacted']
@@ -149,6 +153,10 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	op=data['Ongoing Projects']
 	fp=data['Failed Projects']
 	done=data['Finished Projects']
+	sa=data['SA(35)']
+	oe=data['Operational Excelence(50)']
+	cd=data['Capability Develeopment(15)']
+	final=data['Final Score(100)']
 	
 	names=data['Name'].to_list()
 	
@@ -175,17 +183,31 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	st.write('This graphs represents the Ongoing Projects,Finished as well as Failed Projects')
 		
 	labels=['Ongoing Projects','Failed Projects','Finished Projects']
-	fig10 = make_subplots(rows=1, cols=3, specs=[[{'type':'domain'}, {'type':'domain'},{'type':'domain'}]])
-	fig10.add_trace(go.Pie(labels=labels, values=[5,2,3], name="Rishabh"),1, 1)
-	fig10.add_trace(go.Pie(labels=labels, values=[4,0,2], name="Sanjeev"),1, 2)
-	fig10.add_trace(go.Pie(labels=labels, values=[8,0,0], name="Charles"),1, 3)
+	fig2 = make_subplots(rows=1, cols=3, specs=[[{'type':'domain'}, {'type':'domain'},{'type':'domain'}]])
+	fig2.add_trace(go.Pie(labels=labels, values=[5,2,3], name="Rishabh"),1, 1)
+	fig2.add_trace(go.Pie(labels=labels, values=[4,0,2], name="Sanjeev"),1, 2)
+	fig2.add_trace(go.Pie(labels=labels, values=[8,0,0], name="Charles"),1, 3)
 
-	fig10.update_traces(hole=.4, hoverinfo="label+percent+name")
-	fig10.update_layout(title_text="Projects Mapping",annotations=[dict(text='Rishabh', x=0.09, y=0.5, font_size=12, showarrow=False),
+	fig2.update_traces(hole=.4, hoverinfo="label+percent+name")
+	fig2.update_layout(title_text="Projects Mapping",annotations=[dict(text='Rishabh', x=0.09, y=0.5, font_size=12, showarrow=False),
                 dict(text='Sanjeev', x=0.50, y=0.5, font_size=12, showarrow=False),dict(text='Charles', x=0.90, y=0.5, font_size=12, showarrow=False)])
-	st.plotly_chart(fig10)
+	st.plotly_chart(fig2)
 	
-		
+	st.write('### Overall PRS Perfomance')
+	st.write('This Graph shows the overall performance of the BD team Member based on **Strategic Performamnce**,**Operational Excellence**, and **Capability Development** followed by a **Final Score**')
+	fig3 = go.Figure()
+	fig3.add_trace(go.Scatter(x=names, y=sa,
+                    mode='lines+markers',
+                    name='Strategic Performance'))
+	fig3.add_trace(go.Scatter(x=names, y=oe,
+                    mode='lines+markers',
+                    name='Operational Exclellence'))
+	fig3.add_trace(go.Scatter(x=names, y=cd,
+                    mode='lines+markers',
+                    name='Capability Development'))
+	st.plotly_chart(fig3)
+	
+	
 		
 	
 	
