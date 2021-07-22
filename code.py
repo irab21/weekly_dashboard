@@ -136,11 +136,19 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	data['Companies Contacted']=data['Companies Contacted'].astype(int)
 	data['E-Meetings Scheduled']=data['E-Meetings Scheduled'].astype(int)
 	data['Meeting Targets']=data['Meeting Targets'].astype(int)
+	data['Ongoing Projects']=data['Ongoing Projects'].astype(int)
+	data['Failed Projects']=data['Failed Projects'].astype(int)
+	data['Finished Projects']=data['Finished Projects'].astype(int)
+	
 
 	companies_contacted=data['Companies Contacted']
 	meetings=data['E-Meetings Scheduled']
 	ongoing_projects=data['Ongoing Projects']
 	targets=data['Meeting Targets']
+	op=data['Ongoing Projects']
+	fp=data['Failed Projects']
+	done=data['Finished Projects']
+	
 	names=data['Name'].to_list()
 	
 	st.write('Hover Over the Graphs to see the numbers')
@@ -161,6 +169,20 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	# Change the bar mode
 	fig1.update_layout(barmode='group')
 	st.plotly_chart(fig1)
+	
+	st.write('### Projects Mapping')
+	st.write('This graphs represents the Ongoing Projects,Finished as well as Failed Projects')
+		
+	labels=['Ongoing Projects','Failed Projects','Finished Projects']
+	fig10 = make_subplots(rows=1, cols=3, specs=[[{'type':'domain'}, {'type':'domain'},{'type':'domain'}]])
+	fig10.add_trace(go.Pie(labels=labels, values=op, name=names),1, 1)
+	fig10.add_trace(go.Pie(labels=labels, values=fp, name=names),1, 2)
+	fig10.add_trace(go.Pie(labels=labels, values=done, name=names),1, 3)
+
+	fig10.update_traces(hole=.4, hoverinfo="label+percent+name")
+	fig10.update_layout(title_text="Projects Mapping",annotations=[dict(text='Ongoing Projects', x=0.09, y=0.5, font_size=12, showarrow=False),
+                dict(text='Finished Projects', x=0.50, y=0.5, font_size=12, showarrow=False),dict(text='Failed Projects', x=0.90, y=0.5, font_size=12, showarrow=False)])
+	st.plotly_chart(fig10)
 	
 		
 		
