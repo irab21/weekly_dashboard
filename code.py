@@ -132,23 +132,7 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 
 	data = load_data()
 	st.write(data)
-	st.sidebar.subheader('Data Division')
-	data['Companies Contacted']=data['Companies Contacted'].astype(int)
-	data['E-Meetings Scheduled']=data['E-Meetings Scheduled'].astype(int)
-	companies_contacted=data['Companies Contacted']
-	meetings=data['E-Meetings Scheduled']
-	ongoing_projects=data['Ongoing Projects']
-	names=data['Name'].to_list()
-	
-	st.write('Hover Over the Graphs to see the numbers')
-	if st.sidebar.checkbox('Show Number of Companies Contacted and Meetings Scheduled', True, key=1):
-		fig=go.Figure()
-		fig.add_trace(go.Bar(x=names,y=companies_contacted,name='Number Of Companies Contacted',marker_color='indianred',text=companies_contacted))
-		fig.add_trace(go.Bar(x=names,y=meetings,name='Meetings Scheduled', marker_color='mediumvioletred',text=meetings))
-		fig.update_traces(texttemplate='%{text:.5s}', textposition='outside',width=0.4)
-		fig.update_layout(uniformtext_minsize=8, uniformtext_mode='hide')
-		fig.update_layout(barmode='group',height=600)
-		st.plotly_chart(fig)
+
 		
 		
 	
