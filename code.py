@@ -124,7 +124,7 @@ if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles 
 	DATA_URL= 'BD Visuals.xlsx'
 	
 
-	@st.cache(persist =True)
+	#@st.cache(persist =True)
 	def load_data():
 		data=pd.read_excel(DATA_URL)
 
