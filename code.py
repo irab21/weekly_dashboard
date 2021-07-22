@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 from PIL import Image 
+from plotly.subplots import make_subplots
 
 password= st.text_input('Please Enter The Password')
 if (password == ("Manpreet") or password==("Abhishek") or password ==("Deepa") or password==("Akanksha") or password==("Amitender") or password=="Ravleen" or password=="Talib" or password=="Chandra" or password=="Dilip" or password=="Soorabh"):
