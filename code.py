@@ -87,12 +87,13 @@ else:
 	st.plotly_chart(fig2)
 
 st.sidebar.markdown('### Scaled Ratio Score')
-if st.sidebar.checkbox('CV Ratio Scale',True,key=4):
-	st.write('### CV Ratio Scale is the ratio of cv submitted to the cv submission target scaled ')
+select1= st.sidebar.selectbox('Drop Box',('CV Submission Ratio Scale','Interview Ratio Scale'),key=6)
+if select1=='CV Submission Ratio Scale':
+	st.write('### CV Submission Ratio Scale is the ratio of cv submitted to the cv submission target scaled ')
 	fig3=px.line(x=team1,y=cv_sr,text=cv_sr)
 	fig3.update_traces(texttemplate='%{text:.2s}',textposition='top center')
 	st.plotly_chart(fig3)
-if st.sidebar.checkbox('Interview Ratio Scale',True,key=5):
+else:
 	st.write('### Interview Ratio scale is a scaled ratio of Total Number of Interviews to the Total Number of CV Submitted')
 	st.write('\n\n')
 	fig4=px.line(x=team1,y=i_sr,text=i_sr)
