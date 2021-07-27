@@ -90,6 +90,7 @@ st.sidebar.markdown('### Scaled Ratio Score')
 select1= st.sidebar.selectbox('Drop Box',('CV Submission Ratio Scale','Interview Ratio Scale'),key=6)
 if select1=='CV Submission Ratio Scale':
 	st.write('### CV Submission Ratio Scale is the ratio of cv submitted to the cv submission target scaled ')
+	st.write('\n\n')
 	fig3=px.line(x=team1,y=cv_sr,text=cv_sr)
 	fig3.update_traces(texttemplate='%{text:.2s}',textposition='top center')
 	st.plotly_chart(fig3)
