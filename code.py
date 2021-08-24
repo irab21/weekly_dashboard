@@ -86,27 +86,27 @@ else:
 	fig2.update_traces(texttemplate='%{text:.2s}', textposition='top center')
 	st.plotly_chart(fig2)
 
-st.sidebar.markdown('### Scaled Ratio Score')
-select1= st.sidebar.selectbox('Drop Box',('CV Submission Ratio Scale','Interview Ratio Scale'),key=6)
-if select1=='CV Submission Ratio Scale':
-	st.write('### CV Submission Ratio Scale is the ratio of cv submitted to the cv submission target scaled ')
-	st.write('\n\n')
-	fig3=px.line(x=team1,y=cv_sr,text=cv_sr)
-	fig3.update_traces(texttemplate='%{text:.2s}',textposition='top center')
-	st.plotly_chart(fig3)
-else:
-	st.write('### Interview Ratio scale is a scaled ratio of Total Number of Interviews to the Total Number of CV Submitted')
-	st.write('\n\n')
-	fig4=px.line(x=team1,y=i_sr,text=i_sr)
-	fig4.update_traces(texttemplate='%{y:.2s}',textposition='top center')
-	st.plotly_chart(fig4)
+#st.sidebar.markdown('### Scaled Ratio Score')
+#select1= st.sidebar.selectbox('Drop Box',('CV Submission Ratio Scale','Interview Ratio Scale'),key=6)
+#if select1=='CV Submission Ratio Scale':
+#	st.write('### CV Submission Ratio Scale is the ratio of cv submitted to the cv submission target scaled ')
+#	st.write('\n\n')
+#	fig3=px.line(x=team1,y=cv_sr,text=cv_sr)
+#	fig3.update_traces(texttemplate='%{text:.2s}',textposition='top center')
+#	st.plotly_chart(fig3)
+#else:
+#	st.write('### Interview Ratio scale is a scaled ratio of Total Number of Interviews to the Total Number of CV Submitted')
+#	st.write('\n\n')
+#	fig4=px.line(x=team1,y=i_sr,text=i_sr)
+#	fig4.update_traces(texttemplate='%{y:.2s}',textposition='top center')
+#	st.plotly_chart(fig4)
 
 st.sidebar.markdown('### Final Scores')
 final_score=pd.DataFrame({'Team':team1,'score':final})
 	#st.write(final_score)
 
 if st.sidebar.checkbox('Final Score',True,key=6):
-	st.write('### This is the final score calculated out of 10,arranged in ascending order')
+	st.write('### This is the final score calculated out of 10,arranged in ascending order. The score is calculated by scaling the CV Submission Percentages and CV Conversion Percentages by dividing them by 10 and then taking average')
 	fig5=px.funnel(final_score,x='score',y='Team',orientation='h')
 	fig5.update_traces(texttemplate='%{x:.2s}')
 	st.plotly_chart(fig5)
