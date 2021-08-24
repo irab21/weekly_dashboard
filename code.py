@@ -106,6 +106,7 @@ final_score=pd.DataFrame({'Team':team1,'score':final})
 	#st.write(final_score)
 
 if st.sidebar.checkbox('Final Score',True,key=6):
+	st.write("\n\n")
 	st.write('### This is the final score calculated out of 10,arranged in ascending order. The score is calculated by scaling the CV Submission Percentages and CV Conversion Percentages by dividing them by 10 and then taking average')
 	fig5=px.funnel(final_score,x='score',y='Team',orientation='h')
 	fig5.update_traces(texttemplate='%{x:.2s}')
