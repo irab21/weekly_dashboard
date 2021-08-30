@@ -115,7 +115,7 @@ if st.sidebar.checkbox('Final Score',True,key=6):
                   color_continuous_scale='RdBu',
                   color_continuous_midpoint=np.average(final_score['score'], weights=final_score['score']))
 	fig5.update_layout(margin = dict(t=50, l=25, r=25, b=25))
-	fig5.update_traces(texttemplate='%{x:.2s}')
+	#fig5.update_traces(texttemplate='%{x:.2s}')
 	st.plotly_chart(fig5)
 
 
