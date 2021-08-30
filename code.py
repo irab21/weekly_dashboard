@@ -110,7 +110,11 @@ if st.sidebar.checkbox('Final Score',True,key=6):
 	st.write('### This is the final score calculated out of 10,arranged in ascending order. The score is calculated by scaling the CV Submission Percentages and CV Conversion Percentages by dividing them by 10 and then taking average')
 	st.write("\n\n")
 	st.write("\n\n")
-	fig5=px.funnel(final_score,x='score',y='Team',orientation='h')
+	fig5=px.treemap(final_score,path=[px.Constant("Team")], values='pop',
+                  color='score', hover_data=['Team'],
+                  color_continuous_scale='RdBu',
+                  color_continuous_midpoint=np.average(df['score'], weights=df['pop']))
+	fig5.update_layout(margin = dict(t=50, l=25, r=25, b=25))x='score',y='Team',orientation='h')
 	fig5.update_traces(texttemplate='%{x:.2s}')
 	st.plotly_chart(fig5)
 
