@@ -23,7 +23,6 @@ DATA_URL= 'weekly_scoreboard.xlsx'
 
 def load_data():
 	data=pd.read_excel(DATA_URL)
-
 	return data 
 
 data = load_data()
@@ -37,7 +36,7 @@ cv_target=data['CV target'].to_list()
 interview=data['Interviews'].to_list()
 cv_percent=data['CV Submission Percentage'].round(decimals=0).to_list()
 cv_conversion=data['CV Conversion'].round(decimals=0).to_list()
-cv_sr=data['CV Ratio Scale'].to_list()
+#cv_sr=data['CV Ratio Scale'].to_list()
 i_sr=data['Interview Ratio Scale'].round(decimals=3).to_list()
 final=data['Final Point Scale'].round(decimals=3).to_list()
 
