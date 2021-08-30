@@ -110,7 +110,7 @@ if st.sidebar.checkbox('Final Score',True,key=6):
 	st.write('### This is the final score calculated out of 10,arranged in ascending order. The score is calculated by scaling the CV Submission Percentages and CV Conversion Percentages by dividing them by 10 and then taking average')
 	st.write("\n\n")
 	st.write("\n\n")
-	fig5=px.funnel(final_score,x='Team',y='score',text='score',orientation='h',height=600)
+	fig5=px.funnel(final_score,x='Team',y='score',text='score',orientation='h')
 	fig5.update_traces(texttemplate='%{text:.2s}')
 
 	
