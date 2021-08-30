@@ -112,7 +112,7 @@ if st.sidebar.checkbox('Final Score',True,key=6):
 	st.write("\n\n")
 	fig5 = go.Figure(go.Funnelarea(values =final_score['score'] , text = final_score['Team'],
 				       marker = {"colors": ["deepskyblue", "lightsalmon", "tan", "teal", "silver"],
-						 "line": {"color": ["wheat", "wheat", "blue", "wheat", "wheat"], "width": [0, 1, 5, 0, 4]}},
+						 "line": {"color": ["wheat", "wheat", "blue", "wheat", "wheat"], "width": [5, 5, 5, 5, 5]}},
 				       textfont = {"family": "Old Standard TT, serif", "size": 13, "color": "black"}, opacity = 0.65))
 	
 	st.plotly_chart(fig5)
