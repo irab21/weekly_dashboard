@@ -119,7 +119,7 @@ if st.sidebar.checkbox('Final Score',True,key=6):
 
 
 #st.write(final)
-st.write('### The Team with Maximum Score is %s, with score %s '% (team1[7],final[7]))
+st.write('### The Team with Maximum Score is %s, with score %s '% (team1[8],final[8]))
 	
 #if (password==("Rishabh BD") or password==("Sanjeev BD") or password==("Charles BD") or password==("Chandra BD") or password==("Soorabh BD") or password==("Dilip BD")):
 	#image_url='posterityfinal.png'
